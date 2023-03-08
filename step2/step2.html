@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./step2.css'>
+    <!-- <script src='main.js'></script> -->
+</head>
+<body>
+    
+    <div class="alertBox" id="alert">알람창임<button onclick="opens('none');">닫기</button></div>
+    <button onclick="opens('block');">버튼</button>
+    
+    <script> 
+        // console.log("open", open);
+        function opens(e){ document.getElementsByClassName('alertBox')[0].style.display = e;} // 구멍 : 파라미터 , 인자 
+        // function closes() {document.getElementById('alert').style.display='none';}
+
+        //opens('block')
+        //opens('none')
+
+      
+    </script>
+
+</body>
+</html>
+

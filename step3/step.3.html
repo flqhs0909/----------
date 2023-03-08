@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./step3.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="alertBox" id="alert">
+        <p id="title">알림창임  </p>
+        <button id="close"> 닫기</button>
+    </div>
+    <button onclick="알림('아이디입력');">버튼1</button>
+    <button onclick="알림('비번입력');">버튼2</button>
+
+    <!-- <script>
+        function 아이디알림창(){ 
+            document.getElementById('title').innerHTML = "아이디 입력하세요";
+            document.getElementById('alert').style.display = 'block';
+        }
+
+        function 비번(){ 
+            document.getElementById('title').innerHTML = "비밀번호를 입력하세요";
+            // document.getElementById('alert').style.display = 'block';
+        }
+    </script> -->
+
+
+     <script>
+        document.getElementById('close').addEventListener('click' , function(){ // function(){}  콜백함수라고 함. 파라미터자리에 들어가는 함수 . 순차적으로 실행하고 싶을 때 콜백함수를 요구한다. **순차적**
+            document.getElementById('alert').style.display ='none';})
+        function 알림(e) {
+            document.getElementById('title').innerHTML = e;
+            document.getElementById('alert').style.display = 'block';
+        }
+
+     </script>
+</body>
+</html>
