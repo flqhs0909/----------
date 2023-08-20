@@ -7,15 +7,18 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link rel='stylesheet' type='text/css' media='screen' href='./else.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../step7/정규식.css'>
+    <!-- <script src='main.js'></script> -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
     <style>
-      button::after{content: "안녕";}
+      /* button::after{content: "안녕";} */
     </style>
 </head>
-
+<body>
+    <button class="login">로그인</button>
+    <div class="black-bg ">
+        <div class="white-bg">
           <h4>로그인하세요</h4>
             <form action="success.html">
                 <div class="my-3">
@@ -30,14 +33,51 @@
        
         </div>
     </div>  
+
+
+    <div class="wrap">
+      <div class="slide-container">
+         <div class="slider-box"><img src="../image/car1.png" alt=""></div>
+          <div class="slider-box"><img src="../image/car2.png" alt=""></div>
+         <div class="slider-box"><img src="../image/car3.png" alt=""></div>
+      </div>
+    </div>
+    <div>
+      <button class="slide-btn1">1</button>
+      <button class="slide-btn2">2</button>
+      <button class="slide-btn3">3</button>
+    </div>
+
+
     <script>
-      $('.login').after()    </script>
+      $('.slide-btn1').on('click' , function(){
+        $('.slide-container').css('transform', 'translateX(0vw)');
+      });
+      $('.slide-btn2').on('click' , function(){
+        $('.slide-container').css('transform', 'translateX(-100vw)');
+      });
+      $('.slide-btn2').on('click' , function(){
+        $('.slide-container').css('transform', 'translateX(-200vw)');
+      });
+
+   
+    </script>
+    <script>
+      var slideImg = 1
+      
+      if( slideImg == 1 ) { 
+        
+      }
+    </script>
+    <!-- <script>
+      $('.login').after()  
+    </script> -->
        
-    <script>
+    <!-- <script>
       document.getElementById('email').addEventListener('input', function(){
         console.log('안녕'); 
       })
-    </script>
+    </script> -->
     <!-- <script>
         //전송버튼 누를때 첫째 <input>에 입력값이 공백이면 알림창
 
@@ -110,5 +150,42 @@
       </script> -->
    
         
+
+      <!--  step7 정규식 -->
+      <!-- 정규식 = /aa / =문자를 검사할 수 있는 식  a 라는 문자가 들어있는지 검사하는 것 /a /.test ('abcd')     -->
+      <!-- 정규식으로 문자 범위지정 가능 / [a-z]/ -->
+      <!-- /\S/ 특수문자 포함 모든 문자 1개를 뜻함 + 를 붙여줘야 반복 검색 (/s+/)   -->
+      <!-- /^a/ a로 시작하냐  , /a$/ a로 끝나냐  , | or    -->
+      <script>
+        $('form').on('submit' , function(e){
+            var 입력한값 = document.getElementById('email').value ;
+            var 비번값 = document.getElementById('pass').value;
+            // if (입력한값 == ''){
+            //     alert('아이디 입력안함')
+            //     e.preventDefault();
+            // }
+            // if(입력한값 != [A-Z]){
+            //     alert('대문자가 없음')
+            //     e.preventDefault();
+            // }
+            if (/\S+@\S+\.\S+/.test(입력한값) == false){
+                    alert('이메일형식아님 ')
+                    e.preventDefault();
+                }
+                console.log(입력한값);
+            //     if(입력한값 != /\S+ @ \S+\.\S+/ ){
+            //         alert('이메일형식아님 ')
+            //         e.preventDefault();
+            //     }
+            if(/[A-Z]/.test(비번값) == false){
+                alert('대문자가 없음')
+                e.preventDefault();
+            }
+        });
+      </script>
+      <!-- 숙제 -->
+      <!-- 폼 전송시 유저가 입력한 비번에 영어 대문자있는지 검사 -->
+
+
 </body>
 </html> 

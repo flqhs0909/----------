@@ -1,0 +1,24 @@
+.show{display: block;}
+
+.black-bg {
+    width : 100%;
+    height : 100%;
+    position : fixed;
+    background : rgba(0,0,0,0.5);
+    z-index : 5;
+    padding: 30px;
+    display:none;
+  }
+  .show{display: block;}
+  .white-bg {
+    background: white;
+    border-radius: 5px;
+    padding: 30px;
+  } 
+
+.mainBg{padding:  100px 20px; background-color: lightgray;}
+
+.wrap{overflow: hidden;}
+.slide-container{ display: flex; width: 300vw;  transition: all 1s;}
+.slider-box{ width: 100vw ;}
+.slider-box img{ width: 100% ;}

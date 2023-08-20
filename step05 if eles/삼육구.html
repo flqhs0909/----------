@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <!-- <script src='main.js'></script> -->
+</head>
+<body>
+    <div>
+        <input type="text" id="test">
+    </div>
+    <script>
+        // function 삼육구(n){
+        //     if ( n % 3 == 0 ){
+        //         console.log("안냥");
+        //     } else { console.log("메롱");}
+        // }
+        function 업글삼육구 (n) {
+            if ( n % 9 == 0 ){
+                console.log("박수박수");
+            } else if ( n % 3 == 0 )
+            {
+                 console.log("박수"); 
+            } else {
+                console.log("통과");
+            }
+        }
+        // 업글삼육구(9)
+        // 업글삼육구(3)
+        // 업글삼육구(11)
+
+        function 합격했냐 ( a , b){
+            if (a < 40  || b < 40 ){
+                console.log(" 과락");
+            } else if ( a + b >= 120 ){
+                console.log("합격 ");
+            } else { console.log("불합격");}
+        }
+
+    
+        합격했냐(30 , 100 );
+        합격했냐(50 , 50 );
+        합격했냐(70, 70);
+    </script>
+</body>
+</html>
